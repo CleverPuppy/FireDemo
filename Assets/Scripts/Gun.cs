@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor.Audio;
 
 public enum BulletMode
 {
@@ -42,6 +43,10 @@ public class Gun : MonoBehaviour
     bool scrap_locked = false;
 
     UnityEngine.UI.Text amor_ui;
+
+    // sound
+    public AudioSource reloadAudio;
+    public AudioSource shootingAudio;
 
     void Start()
     {
@@ -111,6 +116,7 @@ public class Gun : MonoBehaviour
     void startReload()
     {
         Debug.Log("Reloading!");
+        playReloadSound();
         reload_time = 0.0f;
         is_reload = true;
     }
@@ -120,6 +126,7 @@ public class Gun : MonoBehaviour
         if(reload_time >= MAX_RELOAD_TIME){
             is_reload = false;
             amor_left = AMOR_PER_PACK;
+            stopReloadSound();
             Debug.Log("reloaded!");
         }
     }
@@ -128,6 +135,7 @@ public class Gun : MonoBehaviour
     {
         reload_time = 0.0F;
         is_reload = false;
+        stopReloadSound();
     }
 
     void update_time()
@@ -147,6 +155,7 @@ public class Gun : MonoBehaviour
         if(timelapse_since_last_fire >= FireRate && amor_left > 0)
         {
             Debug.Log("Fire!");
+            playShootSound();
             switch (bulletMode)
             {
                 case BulletMode.CollisionMode:
@@ -205,5 +214,20 @@ public class Gun : MonoBehaviour
                 amor_ui.text = amor_left + "/" + AMOR_PER_PACK;
             }
         }
+    }
+
+    void playReloadSound()
+    {
+        reloadAudio.Play();
+    }
+
+    void stopReloadSound()
+    {
+        reloadAudio.Stop();
+    }
+
+    void playShootSound()
+    {
+        shootingAudio.Play();
     }
 }

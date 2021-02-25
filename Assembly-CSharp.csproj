@@ -66,10 +66,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Boom.cs" />
     <Compile Include="Assets\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\GunSwicher.cs" />
     <Compile Include="Assets\Scripts\SimpleCameraController.cs" />
-    <Compile Include="Assets\Tutorial_Info\Scripts\Readme.cs" />
     <None Include="Assets\Resource\Soldiers\NO_1\Shaders\SkinShader.shader" />
     <Reference Include="UnityEngine">
       <HintPath>D:/GameDev/UnityDev/2019.4.16f1c1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

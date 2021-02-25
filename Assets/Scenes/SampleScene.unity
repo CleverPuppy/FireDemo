@@ -622,6 +622,25 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3564101409146316351}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2125955408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6825810018027653459, guid: eb9a58f2b6b1139449e3a54616bccff0,
+    type: 3}
+  m_PrefabInstance: {fileID: 5943431931741507210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2125955413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125955408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5aaf2ce4d8b484a92b025410c3f0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
 --- !u!1001 &408733014577956374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,6 +896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solider_2
       objectReference: {fileID: 0}
+    - target: {fileID: 9102075733735619412, guid: 970be35af718bd848adccdb56d7eb7f7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 970be35af718bd848adccdb56d7eb7f7, type: 3}
 --- !u!1001 &5943431931741507210
@@ -886,6 +910,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1320313025, guid: eb9a58f2b6b1139449e3a54616bccff0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6193002161583363049, guid: eb9a58f2b6b1139449e3a54616bccff0,
         type: 3}
       propertyPath: m_RootOrder

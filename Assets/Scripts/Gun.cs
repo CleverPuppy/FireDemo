@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum BulletMode
 {
@@ -40,13 +41,23 @@ public class Gun : MonoBehaviour
     bool is_reload = false;
     bool scrap_locked = false;
 
-
+    UnityEngine.UI.Text amor_ui;
 
     void Start()
     {
         timelapse_since_last_fire = FireRate;
         amor_left = AMOR_PER_PACK;
         Debug.Log(BulletRespawn.transform);
+
+        GameObject tempObject = GameObject.Find("amor_ui");
+        if (tempObject != null)
+        {
+            amor_ui = tempObject.GetComponent<UnityEngine.UI.Text>();
+            if(amor_ui == null)
+            {
+                Debug.Log("can't get gun_stock object ");
+            }
+        }
     }
 
     // Update is called once per frame
@@ -92,6 +103,9 @@ public class Gun : MonoBehaviour
         {
             swapFireMode();
         }
+
+        // 更改UI中的弹夹数量
+        update_ui();
     }
 
     void startReload()
@@ -174,6 +188,22 @@ public class Gun : MonoBehaviour
         else if (fireMode == GunFireMode.Burst)
         {
             fireMode = GunFireMode.Scrap;
+        }
+    }
+
+    void update_ui()
+    {
+        if(amor_ui)
+        {
+            if(is_reload)
+            {
+                float time_left = MAX_RELOAD_TIME - reload_time;
+                amor_ui.text = "装弹中..." + string.Format("{0:0.#}", time_left);
+            }
+            else
+            {
+                amor_ui.text = amor_left + "/" + AMOR_PER_PACK;
+            }
         }
     }
 }

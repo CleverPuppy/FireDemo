@@ -124,7 +124,7 @@ public class Gun : MonoBehaviour
         }
     }
 
-    void cancelReload()
+    public void cancelReload()
     {
         reload_time = 0.0F;
         is_reload = false;

@@ -34,9 +34,12 @@ public class GunSwicher : MonoBehaviour
 
     void changeGun(uint index)
     {
-        for (int i = 0; i < Guns.Length; i++)
-        {
-            Guns[i].SetActive(i == index ? true : false);
-        }
+        // 取消现有枪械的换弹
+        Guns[curr_gun_index].GetComponent<Gun>().cancelReload();
+
+        Guns[curr_gun_index].SetActive(false);
+
+        curr_gun_index = index;
+        Guns[index].SetActive(true);
     }
 }

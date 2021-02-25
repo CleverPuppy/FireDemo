@@ -11,6 +11,10 @@ public class GunSwicher : MonoBehaviour
     void Start()
     {
         Guns = GameObject.FindGameObjectsWithTag("Gun");
+        for(int i = 0; i < Guns.Length; ++i)
+        {
+            Guns[i].SetActive(false);
+        }
         curr_gun_index = 0;
         changeGun(curr_gun_index);
     }

@@ -42,6 +42,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afc6200a3652cd74cb819b20a72be19b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletFlyingSoundName: BombDrop
+  bulletHitSoundName: BombExpload
+  bulletFlyingSound: {fileID: 5178206749085877842, guid: 3697e53d9b1e9f04ba1afca93a696271,
+    type: 3}
+  bulletHitSound: {fileID: 1763976492148921788, guid: 8b2bb3075766ded4e9f3c8f95fb83b45,
+    type: 3}
 --- !u!1001 &198535851080632746
 PrefabInstance:
   m_ObjectHideFlags: 0

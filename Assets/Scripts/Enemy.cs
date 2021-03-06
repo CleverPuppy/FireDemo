@@ -16,14 +16,20 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(shouldDestroy())
-        {
-            Object.Destroy(gameObject, death_animate_time);
-        }
+
     }
 
     bool shouldDestroy()
     {
         return health <= 0;
+    }
+
+    public void applyDamage(float damage_val)
+    {
+        health -= damage_val;
+        if (shouldDestroy())
+        {
+            Object.Destroy(gameObject, death_animate_time);
+        }
     }
 }

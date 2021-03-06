@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solider_2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 100066, guid: 4112a5f8ef41a0e42b7f36c3497021d7, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 4112a5f8ef41a0e42b7f36c3497021d7, type: 3}
       propertyPath: m_RootOrder
       value: 0

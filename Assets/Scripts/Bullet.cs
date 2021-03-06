@@ -14,6 +14,8 @@ public class Bullet : MonoBehaviour
     public GameObject ExplosionEffect;
     ParticleSystem ExplosionEffectSystem;
 
+    public float ExplosionRadius = 2.0f;
+    public float baseDamage = 40.0f;
     void Start()
     {
         bulletFlyingSound = GameObject.Find(bulletFlyingSoundName).GetComponent<AudioSource>();
@@ -41,6 +43,18 @@ public class Bullet : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+
+        GameObject[] allEnemy = GameObject.FindGameObjectsWithTag("Enemy");
+        Vector3 explosionPosition = collision.transform.position;
+        for(int i = 0; i < allEnemy.Length; ++i)
+        {
+            if (Vector3.Distance(explosionPosition, allEnemy[i].gameObject.transform.position) < ExplosionRadius)
+            {
+                // apply Damage
+                float damage = baseDamage;
+                applyDamage(allEnemy[i], damage);
+            }
         }
     }
 
@@ -72,5 +86,11 @@ public class Bullet : MonoBehaviour
     void playExplosionEffect()
     {
         ExplosionEffectSystem.Play();
+    }
+
+    void applyDamage(GameObject enemy , float damage)
+    {
+        enemy.GetComponent<Enemy>().applyDamage(damage);
+        //TODO shou damage UI
     }
 }

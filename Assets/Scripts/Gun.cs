@@ -51,6 +51,8 @@ public class Gun : MonoBehaviour
     // effect 
     public GameObject GunFireEffect;
     ParticleSystem GunFireEffectSystem;
+
+    public float RayCastBulletDamage = 10.0f;
     void Start()
     {
         timelapse_since_last_fire = FireRate;
@@ -179,6 +181,11 @@ public class Gun : MonoBehaviour
                     {
                         Debug.Log("Ray Hit is " + hitInfo.collider.gameObject.name);
                         Debug.DrawLine(ray.origin, hitInfo.point, Color.red, 1F);
+                        GameObject hitObj = hitInfo.collider.gameObject;
+                        if(hitObj.CompareTag("Enemy"))
+                        {
+                            applyDamage(hitObj);
+                        }
                     }
                     break;
             }
@@ -257,5 +264,9 @@ public class Gun : MonoBehaviour
     {
         if(GunFireEffectSystem)
             GunFireEffectSystem.Play();
+    }
+    void applyDamage(GameObject enemy)
+    {
+        enemy.GetComponent<Enemy>().applyDamage(RayCastBulletDamage);
     }
 }

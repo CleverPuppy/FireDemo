@@ -184,7 +184,7 @@ public class Gun : MonoBehaviour
                         GameObject hitObj = hitInfo.collider.gameObject;
                         if(hitObj.CompareTag("Enemy"))
                         {
-                            applyDamage(hitObj);
+                            applyDamageAndShowImpact(hitObj, hitInfo.point, Quaternion.Inverse( Quaternion.LookRotation(ray.direction)));
                         }
                     }
                     break;
@@ -268,5 +268,10 @@ public class Gun : MonoBehaviour
     void applyDamage(GameObject enemy)
     {
         enemy.GetComponent<Enemy>().applyDamage(RayCastBulletDamage);
+    }
+
+    void applyDamageAndShowImpact(GameObject enemy, Vector3 position, Quaternion rotation)
+    {
+        enemy.GetComponent<Enemy>().applyDamageAndShowImpact(RayCastBulletDamage, position, rotation);
     }
 }

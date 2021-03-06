@@ -18,20 +18,22 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.02, z: 0}
---- !u!136 &9102075733735619412
-CapsuleCollider:
+--- !u!114 &8132127830004376901
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4142960224236347752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.41530052
-  m_Height: 2.0223958
-  m_Direction: 1
-  m_Center: {x: -3.0422737e-11, y: 1.0164659, z: -0.049644496}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5aaf2ce4d8b484a92b025410c3f0da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  death_animate_time: 1
+  HitImpactPrefab: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
+    type: 3}
 --- !u!1001 &4142960224236447626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -103,6 +105,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.021000002
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 4112a5f8ef41a0e42b7f36c3497021d7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f79109a6060c3ef40b3c1d97a92ee078, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4112a5f8ef41a0e42b7f36c3497021d7, type: 3}
 --- !u!1 &4142960224236347752 stripped

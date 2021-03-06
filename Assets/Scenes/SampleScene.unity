@@ -558,6 +558,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &892222444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7431160782266084911, guid: 63dd2be651a98414bb3f4f6da8b7c780,
+    type: 3}
+  m_PrefabInstance: {fileID: 3564101409146316351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1039546707 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6897781566767705700, guid: 4dafb03a2a6743644b52c8657bf03fcf,
@@ -898,6 +904,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 130, z: 90}
+--- !u!1 &1539893923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7342466506325580944, guid: 549f0d65cdd6a87428b598035c639517,
+    type: 3}
+  m_PrefabInstance: {fileID: 408733014577956374}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1644946920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5292162252884962520, guid: 6e27b4bc87eae7b47b9e62b9e908d354,
@@ -1084,6 +1096,12 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 1315009964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2000272949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7966506238137118223, guid: 193d9fbb4a124504891ae2a93cd756c9,
+    type: 3}
+  m_PrefabInstance: {fileID: 7418738418263317917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2035145225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1177,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5aaf2ce4d8b484a92b025410c3f0da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 100
   death_animate_time: 1
 --- !u!1 &2133526428
 GameObject:
@@ -1331,9 +1349,59 @@ PrefabInstance:
       objectReference: {fileID: 1644946921}
     - target: {fileID: 408733014117198824, guid: 549f0d65cdd6a87428b598035c639517,
         type: 3}
+      propertyPath: GunFireEffect
+      value: 
+      objectReference: {fileID: 1539893923}
+    - target: {fileID: 408733014117198824, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
       propertyPath: shootingAudio
       value: 
       objectReference: {fileID: 1923460990}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0013
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0465
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00106
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7343143513031499858, guid: 549f0d65cdd6a87428b598035c639517,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 549f0d65cdd6a87428b598035c639517, type: 3}
 --- !u!1001 &3564101409146316351
@@ -1348,6 +1416,11 @@ PrefabInstance:
       propertyPath: reloadAudio
       value: 
       objectReference: {fileID: 1644946921}
+    - target: {fileID: 3564101408674208536, guid: 63dd2be651a98414bb3f4f6da8b7c780,
+        type: 3}
+      propertyPath: GunFireEffect
+      value: 
+      objectReference: {fileID: 892222444}
     - target: {fileID: 3564101408674208536, guid: 63dd2be651a98414bb3f4f6da8b7c780,
         type: 3}
       propertyPath: shootingAudio
@@ -1463,6 +1536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanzerSchreck
       objectReference: {fileID: 0}
+    - target: {fileID: 7434722943176872685, guid: 63dd2be651a98414bb3f4f6da8b7c780,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0008
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63dd2be651a98414bb3f4f6da8b7c780, type: 3}
 --- !u!1001 &4142960225432674942
@@ -1532,6 +1610,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Solider_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4142960224245863146, guid: 970be35af718bd848adccdb56d7eb7f7,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f79109a6060c3ef40b3c1d97a92ee078, type: 2}
     - target: {fileID: 9102075733735619412, guid: 970be35af718bd848adccdb56d7eb7f7,
         type: 3}
       propertyPath: m_Enabled
@@ -1550,6 +1633,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 221198048118360467, guid: eb9a58f2b6b1139449e3a54616bccff0,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a30af376236208d4fb8bb7241ecb6558, type: 2}
     - target: {fileID: 6193002161583363049, guid: eb9a58f2b6b1139449e3a54616bccff0,
         type: 3}
       propertyPath: m_RootOrder
@@ -1820,8 +1908,28 @@ PrefabInstance:
       objectReference: {fileID: 1644946921}
     - target: {fileID: 7418738419157689627, guid: 193d9fbb4a124504891ae2a93cd756c9,
         type: 3}
+      propertyPath: GunFireEffect
+      value: 
+      objectReference: {fileID: 2000272949}
+    - target: {fileID: 7418738419157689627, guid: 193d9fbb4a124504891ae2a93cd756c9,
+        type: 3}
       propertyPath: shootingAudio
       value: 
       objectReference: {fileID: 1923460990}
+    - target: {fileID: 7418738419157689627, guid: 193d9fbb4a124504891ae2a93cd756c9,
+        type: 3}
+      propertyPath: GunFireEffectObject
+      value: 
+      objectReference: {fileID: 2000272949}
+    - target: {fileID: 7418738419157689627, guid: 193d9fbb4a124504891ae2a93cd756c9,
+        type: 3}
+      propertyPath: GunFireEffectPrefab
+      value: 
+      objectReference: {fileID: 2000272949}
+    - target: {fileID: 7966506238137118223, guid: 193d9fbb4a124504891ae2a93cd756c9,
+        type: 3}
+      propertyPath: m_Name
+      value: GunFireEffect
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193d9fbb4a124504891ae2a93cd756c9, type: 3}

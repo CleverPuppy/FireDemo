@@ -48,6 +48,9 @@ public class Gun : MonoBehaviour
     public AudioSource reloadAudio;
     public AudioSource shootingAudio;
 
+    // effect 
+    public GameObject GunFireEffect;
+    ParticleSystem GunFireEffectSystem;
     void Start()
     {
         timelapse_since_last_fire = FireRate;
@@ -63,6 +66,8 @@ public class Gun : MonoBehaviour
                 Debug.Log("can't get gun_stock object ");
             }
         }
+
+        initGunFireEffect();
     }
 
     // Update is called once per frame
@@ -156,6 +161,7 @@ public class Gun : MonoBehaviour
         {
             Debug.Log("Fire!");
             playShootSound();
+            playGunFireEffect();
             switch (bulletMode)
             {
                 case BulletMode.CollisionMode:
@@ -229,5 +235,27 @@ public class Gun : MonoBehaviour
     void playShootSound()
     {
         shootingAudio.Play();
+    }
+
+    void initGunFireEffect()
+    {
+        if (GunFireEffect!= null)
+        {
+            GunFireEffectSystem = GunFireEffect.GetComponent<ParticleSystem>();
+            if (!GunFireEffectSystem)
+            {
+                Debug.LogError("initGunFireEffect Failed");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("GunFireEffect not set!");
+        }
+
+    }
+    void playGunFireEffect()
+    {
+        if(GunFireEffectSystem)
+            GunFireEffectSystem.Play();
     }
 }

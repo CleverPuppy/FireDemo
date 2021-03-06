@@ -10,10 +10,15 @@ public class Bullet : MonoBehaviour
 
     AudioSource bulletFlyingSound;
     AudioSource bulletHitSound;
+
+    public GameObject ExplosionEffect;
+    ParticleSystem ExplosionEffectSystem;
+
     void Start()
     {
         bulletFlyingSound = GameObject.Find(bulletFlyingSoundName).GetComponent<AudioSource>();
         bulletHitSound = GameObject.Find(bulletHitSoundName).GetComponent<AudioSource>();
+        initExplosionEffect();
         onFlying();
     }
 
@@ -26,8 +31,17 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Boom!");
+        gameObject.GetComponent<CapsuleCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
         onHit();
-        Destroy(gameObject);
+        if(ExplosionEffectSystem)
+        {
+            Destroy(gameObject, ExplosionEffectSystem.main.duration);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void onFlying()
@@ -39,5 +53,24 @@ public class Bullet : MonoBehaviour
     {
         bulletFlyingSound.Stop();
         bulletHitSound.Play();
+        playExplosionEffect();
+    }
+
+    void initExplosionEffect()
+    {
+        if (ExplosionEffect)
+        {
+            ExplosionEffectSystem = ExplosionEffect.GetComponent<ParticleSystem>();
+            if(!ExplosionEffectSystem)
+                Debug.LogError("ExplosionEffect wrong");
+        }else
+        {
+            Debug.LogWarning("ExplosionEffect not set");
+        }
+    }
+
+    void playExplosionEffect()
+    {
+        ExplosionEffectSystem.Play();
     }
 }

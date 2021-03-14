@@ -18,6 +18,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.465, z: 0}
+--- !u!114 &264331193608093265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825810018027653459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43c5cdc40910f14fb1bd8076c4de8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6385377307074391786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +43,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  death_animate_time: 1
+  death_animate_time: 3.4
+  attack_range: 50
+  run_speed: 0.1
   HitImpactPrefab: {fileID: 1000013169864706, guid: e5a3d6da48298a0458c1990f58c27069,
     type: 3}
 --- !u!1001 &5943431931249718274

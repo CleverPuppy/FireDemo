@@ -32,11 +32,12 @@ public class Enemy : MonoBehaviour
     {
         if(inAttackRange())
         {
-            enemy_ac.Attack();
+            attack();
         }
         else
         {
             enemy_ac.Run();
+            moveToPlayer();
             // RUN To 
         }
     }
@@ -77,7 +78,17 @@ public class Enemy : MonoBehaviour
 
     void moveToPlayer()
     {
-        gameObject.transform.position += (gameObject.transform.position - player.transform.position) * run_speed * Time.deltaTime;
+        Vector3 direction;
+        direction.x =  player.transform.position.x - gameObject.transform.position.x ;
+        direction.z = player.transform.position.z - gameObject.transform.position.z;
+        direction.y = 0;
+        direction.Normalize();
+        gameObject.transform.position += direction * Time.deltaTime * run_speed;
+    }
+
+    void attack()
+    {
+        enemy_ac.Attack();
     }
 
     bool inAttackRange()

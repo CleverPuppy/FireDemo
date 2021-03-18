@@ -45,6 +45,8 @@ MonoBehaviour:
   bulletFlyingSoundName: BombDrop
   bulletHitSoundName: BombExpload
   ExplosionEffect: {fileID: 2722462586604523529}
+  ExplosionRadius: 20
+  baseDamage: 200
 --- !u!1001 &919006226160655089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,15 +145,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.0437
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.0437
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.0437
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4000011428506136, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
       propertyPath: m_LocalPosition.x

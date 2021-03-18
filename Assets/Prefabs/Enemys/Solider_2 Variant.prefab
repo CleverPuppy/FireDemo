@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!143 &8226935211599856640
-CharacterController:
+--- !u!136 &6067571126928333814
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,14 +10,22 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.44
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1.02, z: 0}
+  m_Radius: 0.54109955
+  m_Height: 2.0579212
+  m_Direction: 1
+  m_Center: {x: -0.010177255, y: 1.0214185, z: -3.2507677e-11}
+--- !u!114 &1985064378036138284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4142960224236347752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43c5cdc40910f14fb1bd8076c4de8a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8132127830004376901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,22 +40,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   death_animate_time: 1.05
-  attack_range: 70
-  run_speed: 0.05
+  attack_range: 25
+  run_speed: 15
   HitImpactPrefab: {fileID: 1000010355441670, guid: 02a509a7fa70ed740ba4197e20c5d32d,
     type: 3}
---- !u!114 &1985064378036138284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4142960224236347752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b43c5cdc40910f14fb1bd8076c4de8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4142960224236447626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -123,6 +119,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f79109a6060c3ef40b3c1d97a92ee078, type: 2}
+    - target: {fileID: 9500000, guid: 4112a5f8ef41a0e42b7f36c3497021d7, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4112a5f8ef41a0e42b7f36c3497021d7, type: 3}
 --- !u!1 &4142960224236347752 stripped

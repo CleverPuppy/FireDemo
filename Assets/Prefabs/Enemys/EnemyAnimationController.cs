@@ -32,9 +32,9 @@ public class EnemyAnimationController : MonoBehaviour
         m_ani.SetTrigger("Damage");
     }
 
-    public void Idle()
+    public void Idle(bool flag)
     {
-        m_ani.SetBool("Idle", true);
+        m_ani.SetBool("Idle", flag);
     }
 
     public void Death()
@@ -49,6 +49,7 @@ public class EnemyAnimationController : MonoBehaviour
 
     public void Attack()
     {
+        Idle(false);
         m_ani.SetBool("Attack", true);
     }
 

@@ -1,7 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!143 &3752397175701071541
-CharacterController:
+--- !u!136 &7768957698777754791
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10,14 +10,10 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.93
-  m_Radius: 0.09
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.465, z: 0}
+  m_Radius: 0.08423257
+  m_Height: 0.9597931
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.4790029, z: -0.011587143}
 --- !u!114 &264331193608093265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,8 +40,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   death_animate_time: 3.4
-  attack_range: 50
-  run_speed: 0.1
+  attack_range: 20
+  run_speed: 10
   HitImpactPrefab: {fileID: 1000013169864706, guid: e5a3d6da48298a0458c1990f58c27069,
     type: 3}
 --- !u!1001 &5943431931249718274
@@ -118,7 +114,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: a7cf46ab058569949b7308cb9954d572,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -188.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a7cf46ab058569949b7308cb9954d572,
         type: 3}
@@ -145,6 +141,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a30af376236208d4fb8bb7241ecb6558, type: 2}
+    - target: {fileID: 5866666021909216657, guid: a7cf46ab058569949b7308cb9954d572,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7cf46ab058569949b7308cb9954d572, type: 3}
 --- !u!1 &6825810018027653459 stripped
